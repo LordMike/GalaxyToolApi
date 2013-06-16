@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB3726A6-51E5-4E88-AB8C-E1891A830C5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalaxyToolApi</RootNamespace>
+    <AssemblyName>GalaxyToolApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComplexTypes\Activity.cs" />
+    <Compile Include="ComplexTypes\Alliance.cs" />
+    <Compile Include="Submission\GalaxyToolPermission.cs" />
+    <Compile Include="Submission\GalaxyToolResult.cs" />
+    <Compile Include="Submission\GalaxyToolVersion.cs" />
+    <Compile Include="Interfaces\ICoordinateContainer.cs" />
+    <Compile Include="Enums\MessageSeverity.cs" />
+    <Compile Include="Submission\ResultMessage.cs" />
+    <Compile Include="Enums\SubmissionResultCode.cs" />
+    <Compile Include="Submission\SubmitResult.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="StringWriterUTF8.cs" />
+    <Compile Include="Utils\EnumExtensions.cs" />
+    <Compile Include="GalaxyToolClient.cs" />
+    <Compile Include="Submission\ValidationResult.cs" />
+    <Compile Include="Roots\AllyPage.cs" />
+    <Compile Include="Headers\AllypageHeader.cs" />
+    <Compile Include="ComplexTypes\Allystatus.cs" />
+    <Compile Include="Roots\GalaxyToolRoot.cs" />
+    <Compile Include="Roots\PluginsInfo.cs" />
+    <Compile Include="ComplexTypes\CombatParty.cs" />
+    <Compile Include="ComplexTypes\CombatReport.cs" />
+    <Compile Include="Roots\CombatReports.cs" />
+    <Compile Include="ComplexTypes\CombatResult.cs" />
+    <Compile Include="Enums\CombatType.cs" />
+    <Compile Include="Enums\CombatWinner.cs" />
+    <Compile Include="Enums\ContentType.cs" />
+    <Compile Include="ComplexTypes\Coordinates.cs" />
+    <Compile Include="ComplexTypes\Debris.cs" />
+    <Compile Include="ComplexTypes\Espionage.cs" />
+    <Compile Include="Roots\EspionageActions.cs" />
+    <Compile Include="ComplexTypes\FileClass.cs" />
+    <Compile Include="ComplexTypes\Fleet.cs" />
+    <Compile Include="Roots\Fleets.cs" />
+    <Compile Include="ComplexTypes\GalaxyView.cs" />
+    <Compile Include="Roots\GalaxyViews.cs" />
+    <Compile Include="Headers\HeaderData.cs" />
+    <Compile Include="Enums\Language.cs" />
+    <Compile Include="ComplexTypes\AmountEntry.cs" />
+    <Compile Include="ComplexTypes\Loot.cs" />
+    <Compile Include="ComplexTypes\Message.cs" />
+    <Compile Include="Roots\Messages.cs" />
+    <Compile Include="Enums\Mission.cs" />
+    <Compile Include="ComplexTypes\Moon.cs" />
+    <Compile Include="ComplexTypes\Planetinfo.cs" />
+    <Compile Include="Roots\Planetinfos.cs" />
+    <Compile Include="ComplexTypes\PlanetPosition.cs" />
+    <Compile Include="ComplexTypes\Player.cs" />
+    <Compile Include="ComplexTypes\Playerdata.cs" />
+    <Compile Include="ComplexTypes\Playerstatus.cs" />
+    <Compile Include="ComplexTypes\PluginInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ComplexTypes\Report.cs" />
+    <Compile Include="Roots\Reports.cs" />
+    <Compile Include="Enums\Scandepth.cs" />
+    <Compile Include="Roots\Stats.cs" />
+    <Compile Include="Headers\StatsHeader.cs" />
+    <Compile Include="Enums\StatsType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Xsd\allypage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\combat_report.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\espionage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\fleet_movement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\galaxyview.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\header.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\message.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\planetinfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\plugins.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\reports.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Xsd\stats.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
