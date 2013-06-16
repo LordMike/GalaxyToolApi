@@ -13,10 +13,10 @@ namespace GalaxyToolApi.ComplexTypes
         public List<AmountEntry> Entries { get; set; }
 
         [XmlAttribute("playername")]
-        public string Playername { get; set; }
+        public string PlayerName { get; set; }
 
         [XmlAttribute("planetname")]
-        public string Planetname { get; set; }
+        public string PlanetName { get; set; }
 
         [XmlAttribute("moon")]
         public bool Moon { get; set; }
