@@ -39,6 +39,10 @@ It is important to set all the required values for each request, as GalaxyTool w
 
 You'll find all the possible items that can be reported under the namespace **GalaxyToolApi.Roots**.
 
+Externals
+----
+I utilize the excellent [RestSharp](https://github.com/restsharp/RestSharp) library to do the requests and responses.
+
 Issues
 -----
 If you find any issues, report them to me here. I'll try to fix them :)
